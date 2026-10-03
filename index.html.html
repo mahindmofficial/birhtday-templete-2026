@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#090014" />
+  <title>Happy Birthday 💖</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+  <div id="stars" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="progress"><span id="progressBar"></span></div>
+    <!-- 01 -->
+    <section class="screen hero active" data-section="1">
+      <div class="content">
+        <div class="emoji-big">🎂</div>
+        <p class="eyebrow">✨ It’s Your Special Day'</p>
+        <h1>Happy Birthday, <span class="pink" data-name>Bondhu'</span>! 💖</h1>
+        <p class="sub">A tiny made for website made with a lot of happiness<br>and a little bit of magic just for you.</p>
+        <button class="btn primary next">Let’s Go →</button>
+      </div>
+    </section>
+
+    <!-- 02 -->
+    <section class="screen question" data-section="2">
+      <div class="content">
+        <div class="emoji-big">🎁</div>
+        <p class="eyebrow">One little question...</p>
+        <h2>Just click when you as you’re ready!!! 😜</h2>
+        <div class="choice-wrap">
+          <button class="btn yes next">Yesss 💗</button>
+          <button class="btn no" id="noBtn">Nooo 🙈</button>
+        </div>
+        <p class="tiny" id="noHint">There is only one correct answer 😌</p>
+      </div>
+    </section>
+
+    <!-- 03 -->
+    <section class="screen message" data-section="3">
+      <div class="content paper">
+        <div class="mini-icons">🌷 ✨ 🎀</div>
+        <p class="eyebrow">💝 Happy Birthday <span data-name>Bondhu</span>! 💝</p>
+        <h2>Today is all about <span class="pink">you</span>.</h2>
+        <p>Your personalized surprise is waiting below. May your day be filled with warm smiles, beautiful moments, and people who make your heart happy.</p>
+        <p class="script">You deserve every good thing. 💕</p>
+        <button class="btn primary next">Let’s Celebrate! 🎉</button>
+      </div>
+      <div class="floating-corner">🎈</div>
+    </section>
+
+    <!-- 04 -->
+    <section class="screen cake-section" data-section="4">
+      <div class="content">
+        <p class="eyebrow">🎂 A Cake Just For You okk!!</p>
+        <h2>Make a wish first...</h2>
+        <div class="cake" id="cake" title="Click the cake">
+          <div class="flame f1"></div><div class="flame f2"></div><div class="flame f3"></div>
+          <div class="candle c1"></div><div class="candle c2"></div><div class="candle c3"></div>
+          <div class="tier top"></div><div class="tier mid"></div><div class="tier bottom"></div>
+          <div class="plate"></div>
+        </div>
+        <p class="hint" id="cakeHint">Click the cake to blow out the candles ✨</p>
+        <button class="btn gold next" id="cakeNext" disabled>Blow the candles 🕯️</button>
+      </div>
+    </section>
+
+    <!-- 05 -->
+    <section class="screen split-cake" data-section="5">
+      <div class="content">
+        <p class="eyebrow">🥳 Let’s Celebrate!</p>
+        <h2>The cake is ready!</h2>
+        <div class="cake-cut-wrap" id="cutCake">
+          <div class="half left"><div class="tier a"></div><div class="tier b"></div><div class="tier c"></div></div>
+          <div class="half right"><div class="tier a"></div><div class="tier b"></div><div class="tier c"></div></div>
+          <div class="cut-plate"></div>
+        </div>
+        <p class="hint">Click the cake to cut it 🎀</p>
+        <button class="btn aqua next" id="cutNext" disabled>I have a message for you 💌</button>
+      </div>
+    </section>
+
+    <!-- 06 -->
+    <section class="screen gallery" data-section="6">
+      <div class="content wide">
+        <p class="eyebrow">📸 Our Little Memories</p>
+        <h2>Moments worth keeping forever</h2>
+        <p class="sub">Add as many photos as you want in <code>assets/photos</code>. They automatically appear here.</p>
+        <div class="photo-grid" id="photoGrid"></div>
+        <div class="gallery-actions">
+          <label class="btn outline upload-label">＋ Add Photos<input id="photoUpload" type="file" accept="image/*" multiple hidden></label>
+          <button class="btn primary next">More Memories →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 -->
+    <section class="screen balloons" data-section="7">
+      <div class="content">
+        <p class="eyebrow">🎈 Pop the Balloons!</p>
+        <p class="tiny">Tap every balloon you can find.</p>
+        <div class="balloon-field" id="balloonField"></div>
+        <p class="hint" id="balloonHint">Balloons left: <b id="balloonCount">8</b></p>
+        <button class="btn primary next" id="balloonNext" disabled>Next 💫</button>
+      </div>
+    </section>
+
+    <!-- 08 -->
+    <section class="screen wishes" data-section="8">
+      <div class="content paper">
+        <p class="eyebrow">🌙 Make a Wish</p>
+        <h2>Three wishes for your new year</h2>
+        <div class="wish-list">
+          <button class="wish">✨ Tap to reveal wish #1</button>
+          <button class="wish">💗 Tap to reveal wish #2</button>
+          <button class="wish">🌸 Tap to reveal wish #3</button>
+        </div>
+        <button class="btn primary next">Keep Going →</button>
+      </div>
+    </section>
+
+    <!-- 09 -->
+    <section class="screen timeline" data-section="9">
+      <div class="content wide">
+        <p class="eyebrow">🕰️ A Tiny Timeline</p>
+        <h2>From then to now...</h2>
+        <div class="timeline-grid">
+          <article><span>01</span><h3>The Beginning 🌱</h3><p>Every beautiful story starts with one simple moment.</p></article>
+          <article><span>02</span><h3>The Memories 📸</h3><p>Little moments slowly become the memories we keep closest.</p></article>
+          <article><span>03</span><h3>Today 🎂</h3><p>A new chapter begins, brighter and happier than before.</p></article>
+        </div>
+        <button class="btn primary next">One More Surprise →</button>
+      </div>
+    </section>
+
+    <!-- 10 -->
+    <section class="screen letter" data-section="10">
+      <div class="content paper letter-card">
+        <div class="seal">💌</div>
+        <p class="eyebrow">A Little Letter</p>
+        <h2>For <span data-name>Jana</span></h2>
+        <p>On your birthday, I hope you remember how special you are. Keep smiling, keep dreaming, and keep choosing the things that make your heart feel alive.</p>
+        <p>May this year bring you peaceful days, exciting adventures, genuine people, and countless reasons to say, “I’m happy I lived this moment.”</p>
+        <p class="script">Happy Birthday, always. 💖</p>
+        <button class="btn primary next">Final Surprise ✨</button>
+      </div>
+    </section>
+
+    <!-- 11 -->
+    <section class="screen surprise" data-section="11">
+      <div class="content">
+        <p class="eyebrow">🎁 Almost There</p>
+        <h2>Ready for the final surprise?</h2>
+        <div class="gift" id="gift"><div class="lid"></div><div class="box"></div><div class="ribbon-v"></div><div class="ribbon-h"></div><div class="bow">🎀</div></div>
+        <p class="hint">Click the gift 🎁</p>
+        <button class="btn primary next" id="giftNext" disabled>Open the final page 💖</button>
+      </div>
+    </section>
+
+    <!-- 12 -->
+    <section class="screen finale" data-section="12">
+      <div class="content">
+        <div class="emoji-big pulse">🎂</div>
+        <p class="eyebrow">🎉 All Done! 🎉</p>
+        <h1>Happy Birthday, <span class="pink" data-name>Jana</span>!</h1>
+        <p class="sub">May your smile stay bright,<br>your dreams grow bigger,<br>and your days become more beautiful. 💕</p>
+        <div class="final-burst">✨ 💖 🎈 🌸 🎉</div>
+        <button class="btn primary" id="replay">Replay from the beginning ↻</button>
+      </div>
+    </section>
+  </main>
+
+  <nav class="dots" id="dots" aria-label="Sections"></nav>
+  <div class="toast" id="toast"></div>
+  <canvas id="confetti"></canvas>
+  <script src="script.js"></script>
+</body>
+</html>
